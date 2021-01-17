@@ -7,8 +7,8 @@ import getValidationErrors from '../../utils/getValidationErrors';
 
 import logoImg from '../../assets/logo.svg';
 
-import Input from '../../assets/components/Input';
-import Button from '../../assets/components/Button';
+import Input from '../../components/Input';
+import Button from '../../components/Button';
 
 import { Container, Content, Background } from './styles';
 
