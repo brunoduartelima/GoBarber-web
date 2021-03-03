@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { FiClock, FiPower } from 'react-icons/fi';
 import {
@@ -8,14 +8,18 @@ import {
     Profile,
     Content,
     Schedule,
+    NextAppointment,
+    Section, 
+    Appointment,
     Calendar,
-    NextAppointment 
 } from './styles';
 
 import { useAuth } from '../../hooks/auth';
 import logoImg from '../../assets/logo.svg';
 
 const Dashboard: React.FC = () => {
+    const [selectedDate, setSelectedDate] = useState(new Date());
+
     const { signOut, user } = useAuth();
 
     return (
@@ -50,9 +54,57 @@ const Dashboard: React.FC = () => {
                         <div>
                             <img src="https://avatars.githubusercontent.com/u/60904531?s=460&u=5768e084645b4b214c1d629d9da36a777b542f4d&v=4" alt="Bruno Lima"/>
                             <strong>Bruno Lima</strong>
-                            <span><FiClock/>08:00</span>
+                            <span>
+                                <FiClock/>
+                                08:00
+                            </span>
                         </div>
                     </NextAppointment>
+
+                    <Section>
+                        <strong>Manhã</strong>
+
+                        <Appointment>
+                            <span>
+                                <FiClock/>
+                                08:00
+                            </span>
+
+                            <div>
+                                <img src="https://avatars.githubusercontent.com/u/60904531?s=460&u=5768e084645b4b214c1d629d9da36a777b542f4d&v=4" alt="Bruno Lima"/>
+                                <strong>Bruno Lima</strong> 
+                            </div>
+                        </Appointment>
+
+                        <Appointment>
+                            <span>
+                                <FiClock/>
+                                08:00
+                            </span>
+
+                            <div>
+                                <img src="https://avatars.githubusercontent.com/u/60904531?s=460&u=5768e084645b4b214c1d629d9da36a777b542f4d&v=4" alt="Bruno Lima"/>
+                                <strong>Bruno Lima</strong> 
+                            </div>
+                        </Appointment>
+                    </Section>
+                    
+                    <Section>
+                        <strong>Tarde</strong>
+
+                        <Appointment>
+                            <span>
+                                <FiClock/>
+                                08:00
+                            </span>
+
+                            <div>
+                                <img src="https://avatars.githubusercontent.com/u/60904531?s=460&u=5768e084645b4b214c1d629d9da36a777b542f4d&v=4" alt="Bruno Lima"/>
+                                <strong>Bruno Lima</strong> 
+                            </div>
+                        </Appointment>
+                    </Section>
+
                 </Schedule>
                 <Calendar />
             </Content>
