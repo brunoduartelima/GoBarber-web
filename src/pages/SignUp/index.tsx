@@ -20,8 +20,8 @@ import { Container, Content, AnimationContainer, Background } from './styles';
 
 interface SignUpFormData {
     name: string;
-    email: string
-    password: string
+    email: string;
+    password: string;
 }
 
 const SignUp: React.FC = () => {
