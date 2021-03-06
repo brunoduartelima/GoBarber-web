@@ -21,6 +21,7 @@ import {
 import { useAuth } from '../../hooks/auth';
 import logoImg from '../../assets/logo.svg';
 import api from '../../services/api';
+import { Link } from 'react-router-dom';
 
 interface MonthAvailabilityItem {
     day: number;
@@ -137,7 +138,7 @@ const Dashboard: React.FC = () => {
                         <img src={user.avatar_url} alt={user.name}/>
                         <div>
                             <span>Bem-vindo,</span>
-                            <strong>{user.name}</strong>
+                            <Link to="/profile"><strong>{user.name}</strong></Link>
                         </div>
                     </Profile>
 
