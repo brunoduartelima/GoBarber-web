@@ -174,6 +174,7 @@ export const Appointment = styled.div`
     }
 
     span {
+        width: 70px;
         margin-left: auto;
         display: flex;
         align-items: center;
